@@ -17,13 +17,9 @@ const actions = {
     async fetchTodos({ commit }) {
         const response = await axios.get(api_url, {
             headers: {
-                // remove headers
-              }
-            }).then(res => {
-              console.log(res);
-            }).catch(err => {
-              console.log(err.response);
-            });
+            'Content-Type': 'application/json'
+            }
+        });
         commit('setTodos', response.data);
     },
     async addTodo({ commit }, title) {
