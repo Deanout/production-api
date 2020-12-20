@@ -7,18 +7,18 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '47.26.3.24'
-    origins '47.26.3.24:8080'
-    origins '172.31.54.169:8080'
-    origins '172.31.54.169'
-    origins 'http://172.31.54.169:8080/'
-    origins 'https://172.31.54.169:8080/'
-    origins 'http://47.26.3.24:8080/'
-    origins 'http://47.26.3.24:8080/'
-    origins 'http://172.31.54.169'
-    origins 'http://47.26.3.24'
-    origins 'https://172.31.54.169'
-    origins 'https://47.26.3.24'
+    origins '47.26.3.24',
+            '47.26.3.24:8080',
+            '172.31.54.169:8080',
+            '172.31.54.169',
+            'http://172.31.54.169:8080/',
+            'https://172.31.54.169:8080/',
+            'http://47.26.3.24:8080/',
+            'http://47.26.3.24:8080/',
+            'http://172.31.54.169',
+            'http://47.26.3.24',
+            'https://172.31.54.169',
+            'https://47.26.3.24'
 
     resource '/api/v1/*',
              headers: :any,
